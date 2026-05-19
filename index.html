@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YurtzCamp</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="loaded learning-page">
+    <main class="learning-shell">
+      <section class="learning-card">
+        <p class="section-subtitle text-center">YurtzCamp</p>
+        <h1 class="headline-1 text-center">Aprender programacion en equipo</h1>
+        <p class="learning-intro text-center">
+          YurtzCamp es una pagina de practica pensada para enseñar, aprender y
+          compartir lo que fuimos descubriendo sobre Git, GitHub y desarrollo
+          web en tiempo real.
+        </p>
+
+        <div class="learning-actions">
+          <button
+            class="btn btn-secondary"
+            id="toggleContent"
+            type="button"
+            aria-expanded="false"
+          >
+            <span class="text text-1">Ver resumen</span>
+            <span class="text text-2">Cambiar vista</span>
+          </button>
+        </div>
+
+        <article class="learning-panel" id="originalPanel">
+          <h2 class="title-2">Fragmento del trabajo original</h2>
+          <p class="body-2">
+            Entre pruebas, risas y errores fuimos descubriendo como funciona el
+            flujo real de trabajo. Practicamos con el servidor local, vimos los
+            cambios en vivo, entendimos mejor la estructura de carpetas del
+            proyecto y tambien aparecieron comandos clave como
+            <code>git add</code>, <code>git commit</code>, <code>git push</code>,
+            <code>git pull</code>, <code>git branch</code> y
+            <code>git remote -v</code>. Tambien quedo claro por que
+            <code>--force</code> puede ser peligroso y por que hay que revisar
+            bien en que carpeta estamos parados antes de ejecutar comandos.
+          </p>
+        </article>
+
+        <article class="learning-panel hidden" id="summaryPanel">
+          <h2 class="title-2">Resumen de lo aprendido</h2>
+          <p class="body-2">
+            Aprendimos que Git no es solo para subir archivos, sino para
+            ordenar el trabajo, colaborar mejor y recuperar el control del
+            proyecto. Entendimos que cada comando cumple una funcion concreta:
+            <code>git add</code> prepara cambios, <code>git commit</code> guarda
+            una version con sentido y <code>git push</code> la publica en el
+            repositorio remoto. Tambien vimos que revisar el origen con
+            <code>git remote -v</code> y traer cambios con
+            <code>git pull</code> evita desincronizaciones.
+          </p>
+          <p class="body-2">
+            Tambien entendimos por que aparecio el error <code>403</code> al
+            intentar hacer <code>git push</code>. Aunque estabamos trabajando
+            juntos con Live Share, GitHub seguia validando la identidad de la
+            cuenta que estaba autenticada en esa terminal. Como el repositorio
+            original pertenecia a otra cuenta, el servidor rechazo el envio por
+            falta de permisos. Eso nos mostro que compartir edicion o terminal
+            no significa compartir automaticamente credenciales, accesos ni
+            autorizaciones de GitHub.
+          </p>
+          <p class="body-2">
+            Los errores de terminal tambien sirvieron para aprender. Varias
+            veces el problema no era Git, sino el contexto: estar en una
+            carpeta distinta, usar una ruta incorrecta, intentar agregar un
+            archivo desde el directorio equivocado o trabajar con ramas y
+            origenes que no coincidian. Con Live Share vimos que colaborar en
+            tiempo real acelera mucho el aprendizaje, pero tambien exige mas
+            atencion sobre quien ejecuta los comandos, desde donde lo hace y
+            con que cuenta esta conectado.
+          </p>
+          <p class="body-2">
+            Del lado del desarrollo web, reforzamos la base de HTML, el uso de
+            Emmet para escribir mas rapido, la importancia de una estructura
+            limpia y el valor de probar en un servidor local. En conjunto, lo
+            mas importante fue entender que programar mejor no depende solo de
+            escribir codigo, sino tambien de saber organizarse, corregir,
+            compartir avances y trabajar en equipo.
+          </p>
+          <div class="learning-tech">
+            <h3 class="title-3">Tecnologias y herramientas usadas</h3>
+            <p class="body-2">
+              HTML5, CSS3, JavaScript, Git, GitHub, Visual Studio Code, Live
+              Share, Emmet, terminal de Windows, servidor local y port
+              forwarding para compartir cambios en tiempo real.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script>
+      const toggleButton = document.getElementById("toggleContent");
+      const originalPanel = document.getElementById("originalPanel");
+      const summaryPanel = document.getElementById("summaryPanel");
+      const buttonText = toggleButton.querySelector(".text-1");
+
+      toggleButton.addEventListener("click", () => {
+        const showingSummary = !summaryPanel.classList.contains("hidden");
+
+        originalPanel.classList.toggle("hidden", !showingSummary);
+        summaryPanel.classList.toggle("hidden", showingSummary);
+
+        toggleButton.setAttribute("aria-expanded", String(!showingSummary));
+        buttonText.textContent = showingSummary
+          ? "Ver resumen"
+          : "Ver texto original";
+      });
+    </script>
+  </body>
+</html>

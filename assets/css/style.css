@@ -2680,6 +2680,36 @@ textarea.input-field {
   padding: 24px;
 }
 
+.learning-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.learning-panel-kicker {
+  color: var(--gold-crayola);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.2rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 8px;
+}
+
+.learning-timestamp {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--quick-silver);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .learning-panel .title-2 {
   margin-bottom: 16px;
 }
@@ -2706,4 +2736,14 @@ textarea.input-field {
   display: inline;
   color: var(--gold-crayola);
   font-family: Consolas, Monaco, monospace;
+}
+
+@media (max-width: 640px) {
+  .learning-panel-header {
+    flex-direction: column;
+  }
+
+  .learning-timestamp {
+    align-self: flex-start;
+  }
 }

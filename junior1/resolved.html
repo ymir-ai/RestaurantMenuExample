@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Junior 1 - Resuelto</title>
+    <title>Junior 1 - Resolver</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,7 +12,7 @@
             colors: {
               brand: {
                 dark: "#0f172a",
-                panel: "#e2e8f0",
+                panel: "#dbeafe",
                 soft: "#f8fafc",
                 accent: "#2563eb",
                 accentDark: "#1d4ed8"
@@ -26,97 +26,79 @@
       };
     </script>
   </head>
-  <body class="min-h-screen bg-gradient-to-br from-brand-soft via-slate-200 to-blue-100 px-4 py-8 text-brand-dark">
-    <main class="flex min-h-[calc(100vh-4rem)] items-center justify-center">
-      <section
-        class="w-full max-w-3xl rounded-[2rem] border border-white/70 bg-white/90 p-8 shadow-login backdrop-blur md:p-10"
-      >
-        <div class="grid gap-8 md:grid-cols-[1.1fr,0.9fr] md:items-center">
-          <div class="space-y-4">
-            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-brand-accent">
-              Tailwind Login
-            </p>
-            <h1 class="text-4xl font-black leading-tight text-brand-dark">
-              Bienvenido de nuevo
-            </h1>
-            <p class="text-base leading-7 text-slate-600">
-              Ejemplo resuelto de un login maquetado solo con utilidades de
-              Tailwind CSS usando la CDN.
-            </p>
-            <div class="rounded-3xl bg-brand-dark p-5 text-sm leading-6 text-slate-200">
-              <p class="font-semibold text-white">Objetivo cumplido</p>
-              <p class="mt-2">
-                Logo arriba, formulario centrado, labels alineados a la
-                izquierda, campos a la derecha y boton de acceso con colores
-                definidos.
-              </p>
-            </div>
-          </div>
-
-          <div class="rounded-[1.75rem] bg-brand-soft p-6 md:p-1">
-            <form id="login-form" class="space-y-5 rounded-[1.5rem] bg-white p-6 shadow-sm">
-              <img
-                src="./logo.svg"
-                alt="Logo de YurtzCamp"
-                class="mx-auto h-20 w-20 rounded-2xl border border-blue-100 bg-white p-3 shadow-sm"
-              />
-
-              <div class="space-y-1 text-center">
-                <h2 class="text-2xl font-bold text-brand-dark">Iniciar sesion</h2>
-                <p class="text-sm text-slate-500">
-                  Ingresa tus datos para continuar.
-                </p>
-              </div>
-
-              <div class="grid gap-1 sm:grid-cols-[60px,1fr] sm:items-center">
-                <label
-                  for="username"
-                  class="text-sm font-semibold text-slate-700 sm:text-left"
-                >
-                  Usuario
-                </label>
-                <input
-                  id="username"
-                  name="username"
-                  type="text"
-                  placeholder="carlos.dev"
-                  class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-brand-dark outline-none transition focus:border-brand-accent focus:ring-4 focus:ring-blue-100"
-                  required
-                />
-              </div>
-
-              <div class="grid gap-1 sm:grid-cols-[80px,1fr] sm:items-center">
-                <label
-                  for="password"
-                  class="text-sm font-semibold text-slate-700 sm:text-left"
-                >
-                  Contrasena
-                </label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="********"
-                  class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-brand-dark outline-none transition focus:border-brand-accent focus:ring-4 focus:ring-blue-100"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                class="w-full rounded-2xl bg-brand-accent px-4 py-3 text-sm font-bold text-white transition hover:bg-brand-accentDark focus:outline-none focus:ring-4 focus:ring-blue-200"
-              >
-                Ingresar
-              </button>
-
-              <p
-                id="login-message"
-                class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
-                role="status"
-              ></p>
-            </form>
-          </div>
+  <body class="min-h-screen bg-slate-100 px-4 py-8 font-sans text-slate-900">
+    <main class="mx-auto flex min-h-[calc(100vh-4rem)] max-w-5xl items-center justify-center">
+      <section class="w-full max-w-2xl border border-slate-200 bg-white p-8">
+        <div class="mb-6">
+          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-accent">
+            Archivo de trabajo
+          </p>
+          <h1 class="mt-3 text-3xl font-bold text-brand-dark">
+            Completa este login con Tailwind
+          </h1>
+          <p class="mt-3 text-base leading-7 text-slate-600">
+            Este archivo esta proposito en una version basica para practicar.
+            La idea es que el alumno agregue rounded, grillas alineadas,
+            responsividad, hover en el boton y el resto de los criterios del
+            README.
+          </p>
         </div>
+
+        <form id="login-form" class="space-y-5">
+          <img
+            src="./logo.svg"
+            alt="Logo de YurtzCamp"
+            class="h-20 w-20"
+          />
+
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Iniciar sesion</h2>
+            <p class="mt-2 text-sm text-slate-600">
+              Agrega clases de Tailwind para mejorar este formulario.
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <label for="username" class="text-sm font-semibold text-slate-700">
+              Usuario
+            </label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Ingresa tu usuario"
+              class="w-full border border-slate-300 px-4 py-3"
+              required
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label for="password" class="text-sm font-semibold text-slate-700">
+              Contrasena
+            </label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Ingresa tu contrasena"
+              class="w-full border border-slate-300 px-4 py-3"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-brand-accent px-4 py-3 text-sm font-semibold text-white"
+          >
+            Ingresar
+          </button>
+
+          <p
+            id="login-message"
+            class="hidden border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
+            role="status"
+          ></p>
+        </form>
       </section>
     </main>
 

@@ -2,19 +2,49 @@ const fs = require("fs");
 const path = require("path");
 
 const starterPath = path.join(__dirname, "..", "..", "junior1", "index.html");
-const resolvedPath = path.join(__dirname, "..", "..", "junior1", "resolved.html");
+const resolvedPath = path.join(
+  __dirname,
+  "..",
+  "..",
+  "junior1",
+  "resolved.html",
+);
 const readmePath = path.join(__dirname, "..", "..", "junior1", "README.md");
 
 describe("Junior 1 - actividad de login con Tailwind", () => {
   const starterHtml = fs.readFileSync(starterPath, "utf8");
   const resolvedHtml = fs.readFileSync(resolvedPath, "utf8");
   const readme = fs.readFileSync(readmePath, "utf8");
-  const roundedMatches = resolvedHtml.match(/rounded(?:-\[[^\]]+\]|-[a-z0-9/]+)/gi) || [];
+  const roundedMatches =
+    resolvedHtml.match(/rounded(?:-\[[^\]]+\]|-[a-z0-9/]+)/gi) || [];
+  const forbiddenStylesheetPattern =
+    /<link[^>]+rel=["']stylesheet["'][^>]*>|styles?\.css/i;
+
+  test("el README explica el ejercicio y los criterios pedidos", () => {
+    expect(readme).toContain("# Junior 1 - Login con Tailwind");
+    expect(readme).toContain("resolved.html");
+    expect(readme).toContain("minimo 4 elementos con bordes redondeados");
+    expect(readme).toContain("login-message");
+    expect(readme).toContain("hover, transicion suave y pequena escala");
+    expect(readme).toContain("NO USAR OTRO STYLE.CSS");
+    expect(readme).toContain("npm test");
+  });
+
+  test("NO USAR OTRO STYLE.CSS", () => {
+    if (
+      forbiddenStylesheetPattern.test(starterHtml) ||
+      forbiddenStylesheetPattern.test(resolvedHtml)
+    ) {
+      throw new Error("NO USAR OTRO STYLE.CSS");
+    }
+  });
 
   test("la base de practica carga Tailwind por CDN y muestra una paleta entendible", () => {
     expect(starterHtml).toContain("https://cdn.tailwindcss.com");
     expect(starterHtml).toContain("Base para practicar");
-    expect(starterHtml).toContain("TODO: centrar esta tarjeta usando utilidades de Tailwind");
+    expect(starterHtml).toContain(
+      "TODO: centrar esta tarjeta usando utilidades de Tailwind",
+    );
     expect(starterHtml).toContain("bg-brand-accent");
     expect(starterHtml).toContain("hover:bg-brand-accentDark");
   });
@@ -30,7 +60,9 @@ describe("Junior 1 - actividad de login con Tailwind", () => {
   });
 
   test("la version resuelta usa tarjeta centrada, rounded multiples y labels alineados", () => {
-    expect(resolvedHtml).toContain("min-h-[calc(100vh-4rem)] items-center justify-center");
+    expect(resolvedHtml).toContain(
+      "min-h-[calc(100vh-4rem)] items-center justify-center",
+    );
     expect(roundedMatches.length).toBeGreaterThanOrEqual(4);
     expect(resolvedHtml).toContain("sm:grid-cols-[120px,1fr]");
     expect(resolvedHtml).toContain("sm:text-right");
@@ -38,7 +70,9 @@ describe("Junior 1 - actividad de login con Tailwind", () => {
   });
 
   test("el logo es el primer elemento visual dentro del formulario", () => {
-    expect(resolvedHtml).toMatch(/<form id="login-form"[\s\S]*?<img[\s\S]*?alt="Logo de YurtzCamp"/);
+    expect(resolvedHtml).toMatch(
+      /<form id="login-form"[\s\S]*?<img[\s\S]*?alt="Logo de YurtzCamp"/,
+    );
   });
 
   test("la version resuelta define fondo, tipografias y evita overflow normal", () => {
@@ -62,14 +96,5 @@ describe("Junior 1 - actividad de login con Tailwind", () => {
     expect(resolvedHtml).toContain('form.addEventListener("submit"');
     expect(resolvedHtml).toContain('id="login-message"');
     expect(resolvedHtml).toContain("Bienvenido ${username}");
-  });
-
-  test("el README explica el ejercicio y los criterios pedidos", () => {
-    expect(readme).toContain("# Junior 1 - Login con Tailwind");
-    expect(readme).toContain("resolved.html");
-    expect(readme).toContain("minimo 4 elementos con bordes redondeados");
-    expect(readme).toContain("login-message");
-    expect(readme).toContain("hover, transicion suave y pequena escala");
-    expect(readme).toContain("npm test");
   });
 });

@@ -26,8 +26,8 @@
       };
     </script>
   </head>
-  <body class="min-h-screen bg-slate-100 px-4 py-8 font-sans text-slate-900">
-    <main class="mx-auto flex min-h-[calc(100vh-4rem)] max-w-5xl items-center justify-center">
+  <body class="min-h-screen bg-white px-4 py-8 text-slate-900">
+    <main class="mx-auto flex max-w-5xl">
       <section class="w-full max-w-2xl border border-slate-200 bg-white p-8">
         <div class="mb-6">
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-accent">
@@ -44,19 +44,19 @@
           </p>
         </div>
 
-        <form id="login-form" class="space-y-5">
-          <img
-            src="./logo.svg"
-            alt="Logo de YurtzCamp"
-            class="h-20 w-20"
-          />
-
+        <form id="basic-login-form" class="space-y-5">
           <div>
             <h2 class="text-2xl font-bold text-slate-900">Iniciar sesion</h2>
             <p class="mt-2 text-sm text-slate-600">
               Agrega clases de Tailwind para mejorar este formulario.
             </p>
           </div>
+
+          <img
+            src="./logo.svg"
+            alt="Logo de YurtzCamp"
+            class="h-20 w-20"
+          />
 
           <div class="space-y-2">
             <label for="username" class="text-sm font-semibold text-slate-700">
@@ -66,7 +66,7 @@
               id="username"
               name="username"
               type="text"
-              placeholder="Ingresa tu usuario"
+              placeholder="usuario"
               class="w-full border border-slate-300 px-4 py-3"
               required
             />
@@ -80,7 +80,7 @@
               id="password"
               name="password"
               type="password"
-              placeholder="Ingresa tu contrasena"
+              placeholder="clave"
               class="w-full border border-slate-300 px-4 py-3"
               required
             />
@@ -94,17 +94,17 @@
           </button>
 
           <p
-            id="login-message"
+            id="form-message"
             class="hidden border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
-            role="status"
+            role="note"
           ></p>
         </form>
       </section>
     </main>
 
     <script>
-      const form = document.getElementById("login-form");
-      const message = document.getElementById("login-message");
+      const form = document.getElementById("basic-login-form");
+      const message = document.getElementById("form-message");
 
       form.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -119,7 +119,7 @@
           return;
         }
 
-        message.textContent = `Bienvenido ${username}, tu login de practica esta listo.`;
+        message.textContent = `Hola ${username}, formulario enviado.`;
         message.classList.remove("hidden");
         form.reset();
       });

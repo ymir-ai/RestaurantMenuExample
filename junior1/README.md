@@ -33,13 +33,14 @@ Construir un login que cumpla con lo siguiente:
 
 - trabajar directamente sobre `resolved.html`
 - usar `index.html` como guia de estructura y checklist
-- comparar de manera local con `resolved copy.html`
-- no subir `resolved copy.html` al repositorio
+
+- no subir `resolvedcopy.html` al repositorio
 
 ## Reglas de la practica
 
 - usar Tailwind CSS desde la CDN
 - no escribir CSS manual para resolver el layout
+- no agregar `styles.css`, `style.css` ni otro archivo CSS externo
 - mantener HTML semantico
 - agregar un pequeno comportamiento en JavaScript para el submit
 
@@ -67,6 +68,8 @@ Construir un login que cumpla con lo siguiente:
 - Existe un `#login-message` que se muestra al enviar correctamente.
 - La tarjeta evita desbordes normales en mobile con `max-w-*`,
   `overflow-hidden`, `break-words` o clases similares.
+- Si aparece un `style.css`, `styles.css` o cualquier stylesheet externo, los
+  tests deben fallar con el mensaje `NO USAR OTRO STYLE.CSS`.
 
 ## Tests
 

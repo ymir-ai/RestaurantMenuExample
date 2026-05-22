@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior 1 - Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0f172a",
+                panel: "#dbeafe",
+                soft: "#f8fafc",
+                accent: "#2563eb",
+                accentDark: "#1d4ed8"
+              }
+            },
+            boxShadow: {
+              login: "0 24px 60px rgba(15, 23, 42, 0.18)"
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-brand-soft via-slate-100 to-blue-100 px-4 py-10 font-sans text-slate-900">
+    <main class="mx-auto flex min-h-[calc(100vh-5rem)] max-w-6xl flex-col gap-8 lg:flex-row">
+      <section class="rounded-3xl border border-slate-200 bg-white p-8 shadow-login lg:w-2/5">
+        <p class="font-mono text-sm font-semibold uppercase tracking-[0.3em] text-brand-accent">
+          Actividad junior 1
+        </p>
+        <h1 class="mt-4 font-serif text-3xl font-black text-slate-900">
+          Maqueta un login con Tailwind CSS
+        </h1>
+        <p class="mt-4 text-base leading-7 text-slate-600">
+          Usa este archivo como punto de partida. La idea es que tu companero
+          complete las clases de Tailwind para lograr un login centrado, con un
+          logo arriba, labels a la izquierda, inputs a la derecha y un boton de
+          ingreso bien visible.
+        </p>
+
+        <div class="mt-6 rounded-2xl bg-slate-50 p-5">
+          <h2 class="text-lg font-bold text-slate-900">Checklist</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+            <li>Agregar un fondo suave que ocupe toda la pantalla.</li>
+            <li>Centrar la tarjeta de login vertical y horizontalmente.</li>
+            <li>Usar al menos 4 clases rounded en elementos visibles.</li>
+            <li>Dejar el logo como primer elemento visual del form.</li>
+            <li>Ordenar cada fila con label a un lado e input al otro.</li>
+            <li>Estilizar el boton con hover, escala y transicion.</li>
+            <li>Evitar overflow y variar fuentes con Tailwind.</li>
+          </ul>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+          <h2 class="text-lg font-bold text-slate-900">Pasos a seguir en resolved.html</h2>
+          <ol class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+            <li>1. Abrir `resolved.html` y trabajar sobre ese archivo.</li>
+            <li>2. Mantener el JavaScript de submit funcionando.</li>
+            <li>3. Hacer que el logo sea el primer hijo visual del `form`.</li>
+            <li>4. Centrar la tarjeta principal y darle rounded, sombra y fondo.</li>
+            <li>5. Alinear `label + input` en cada fila usando grid o flex.</li>
+            <li>6. Agregar placeholders claros y mantener `required`.</li>
+            <li>7. Estilizar el boton con color, hover y transicion suave.</li>
+            <li>8. Comprobar que exista `#login-message` y se muestre al enviar.</li>
+          </ol>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-5">
+          <h2 class="font-mono text-sm font-bold uppercase tracking-[0.2em] text-brand-accent">
+            Paleta sugerida
+          </h2>
+          <p class="mt-3 text-sm leading-6 text-slate-700">
+            Usa `bg-brand-soft`, `text-brand-dark`, `bg-brand-accent` y
+            `hover:bg-brand-accentDark` para mantener una identidad visual
+            consistente con Tailwind.
+          </p>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50 p-5">
+          <h2 class="text-lg font-bold text-slate-900">Criterios que validan los tests</h2>
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+            <li>Debe existir un fondo con color o gradiente definido.</li>
+            <li>Se esperan varias clases `rounded-*` en elementos visibles.</li>
+            <li>El `form` debe usar `id="login-form"`.</li>
+            <li>El logo debe quedar primero dentro del formulario.</li>
+            <li>Los campos deben incluir `Usuario`, `Contrasena`, placeholder y `required`.</li>
+            <li>Los labels y campos deben quedar alineados con clases responsivas.</li>
+            <li>El boton debe tener `transition` y hover con escala o elevacion.</li>
+            <li>Se esperan distintas fuentes o tamanos como `font-sans`, `font-serif`, `font-mono`, `text-4xl`.</li>
+            <li>Debe evitarse overflow horizontal normal.</li>
+            <li>Debe existir `id="login-message"` con mensaje correcto al enviar.</li>
+            <li>No se permite agregar `style.css`, `styles.css` ni otro stylesheet externo.</li>
+          </ul>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-rose-100 bg-rose-50 p-5">
+          <h2 class="text-lg font-bold text-rose-700">Regla importante</h2>
+          <p class="mt-3 text-sm leading-6 text-slate-700">
+            Si agregas un archivo aparte como `style.css`, `styles.css` o un
+            `<link rel="stylesheet">` distinto de Tailwind, los tests deben
+            fallar con este mensaje:
+          </p>
+          <p class="mt-3 rounded-xl bg-white px-4 py-3 font-mono text-sm font-bold text-rose-700">
+            NO USAR OTRO STYLE.CSS
+          </p>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-amber-100 bg-amber-50 p-5">
+          <h2 class="text-lg font-bold text-slate-900">Como hacer pasar los tests</h2>
+          <div class="mt-4 space-y-3 text-sm leading-6 text-slate-700">
+            <p>
+              1. Ejecuta `npm run test:jest -- tests/jest/junior1.test.js` para
+              revisar la estructura esperada.
+            </p>
+            <p>
+              2. Ejecuta `npx playwright test tests/playwright/junior1.spec.js`
+              para validar render, submit y responsividad.
+            </p>
+            <p>
+              3. Si una prueba falla, compara `resolved.html` con estos
+              criterios y corrige clases, ids o textos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-1 items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-white/70 p-6">
+        <div class="w-full max-w-xl overflow-hidden rounded-3xl border-2 border-dashed border-slate-300 bg-white p-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+            Base para practicar
+          </p>
+
+          <!-- TODO: centrar esta tarjeta usando utilidades de Tailwind -->
+          <!-- TODO: definir colores, rounded y shadow -->
+          <form id="login-form" class="mt-6 space-y-5">
+            <!-- TODO: hacer que el logo sea el primer item y quede centrado -->
+            <img
+              src="./logo.svg"
+              alt="Logo de YurtzCamp"
+              class="mx-auto h-20 w-20 rounded-2xl"
+            />
+
+            <div>
+              <h2 class="font-serif text-2xl font-bold text-slate-900">Iniciar sesion</h2>
+              <p class="mt-2 text-sm text-slate-600">
+                Completa las clases de Tailwind para que este formulario se vea
+                como un login profesional.
+              </p>
+            </div>
+
+            <!-- TODO: alinear el label y el input lado a lado -->
+            <div class="space-y-2 sm:grid sm:grid-cols-[120px,1fr] sm:items-center sm:gap-3 sm:space-y-0">
+              <label for="username" class="text-sm font-semibold text-slate-700">
+                Usuario
+              </label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Ingresa tu usuario"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3"
+                required
+              />
+            </div>
+
+            <!-- TODO: alinear el label y el input lado a lado -->
+            <div class="space-y-2 sm:grid sm:grid-cols-[120px,1fr] sm:items-center sm:gap-3 sm:space-y-0">
+              <label for="password" class="text-sm font-semibold text-slate-700">
+                Contrasena
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Ingresa tu contrasena"
+                class="w-full rounded-xl border border-slate-300 px-4 py-3"
+                required
+              />
+            </div>
+
+            <!-- TODO: convertir este boton en un CTA con colores definidos -->
+            <button
+              type="submit"
+              class="w-full rounded-xl bg-brand-accent px-4 py-3 text-sm font-semibold text-white transition duration-300 hover:scale-105 hover:bg-brand-accentDark"
+            >
+              Ingresar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

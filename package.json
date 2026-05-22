@@ -1,0 +1,16 @@
+{
+  "name": "yurtzcamp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proyecto de practica colaborativa con tests de Jest y Playwright.",
+  "scripts": {
+    "test": "npm run test:jest && npm run test:playwright",
+    "test:jest": "jest",
+    "test:playwright": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "http-server": "^14.1.1",
+    "jest": "^30.0.5"
+  }
+}

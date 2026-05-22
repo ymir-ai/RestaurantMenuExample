@@ -26,69 +26,65 @@
       };
     </script>
   </head>
-  <body class="min-h-screen bg-white px-4 py-8 text-slate-900">
-    <main class="mx-auto flex max-w-5xl">
-      <section class="w-full max-w-2xl border border-slate-200 bg-white p-8">
+  <body class="min-h-screen min-w-screen bg-blue-50 px-4 py-8 text-slate-900 flex justify-center items-center">
+    <main class="mx-auto flex max-w-full">
+      <section class="w-full border border-slate-200 bg-white p-8 rounded-2xl shadow-md">
         <div class="mb-6">
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-accent">
             Archivo de trabajo
           </p>
-          <h1 class="mt-3 text-3xl font-bold text-brand-dark">
-            Completa este login con Tailwind
-          </h1>
-          <p class="mt-3 text-base leading-7 text-slate-600">
-            Este archivo esta proposito en una version basica para practicar.
-            La idea es que el alumno agregue rounded, grillas alineadas,
-            responsividad, hover en el boton y el resto de los criterios del
-            README.
-          </p>
-        </div>
 
-        <form id="basic-login-form" class="space-y-5">
+        <form id="basic-login-form" class="space-y-5 flex flex-col justify-center">
           <div>
-            <h2 class="text-2xl font-bold text-slate-900">Iniciar sesion</h2>
-            <p class="mt-2 text-sm text-slate-600">
-              Agrega clases de Tailwind para mejorar este formulario.
+            <h2 class="text-2xl font-bold text-slate-900 font-serif">Iniciar Sesión</h2>
+            <p class="mt-2 text-sm text-slate-500">
+              ¡Bienvenido a YurtzCamp! Estamos contentos de que quieras desarrollarte con nosotros.
             </p>
           </div>
 
           <img
             src="./logo.svg"
             alt="Logo de YurtzCamp"
-            class="h-20 w-20"
+            class="h-20 w-20 order-first self-center"
           />
 
-          <div class="space-y-2">
-            <label for="username" class="text-sm font-semibold text-slate-700">
+          <div class="space-y-2 inline-flex">
+            <label for="username" class="text-sm font-semibold font-serif text-slate-700 self-center mr-[3.3rem]">
               Usuario
             </label>
             <input
               id="username"
               name="username"
               type="text"
-              placeholder="usuario"
-              class="w-full border border-slate-300 px-4 py-3"
+              placeholder="Usuario"
+              class="w-full border border-slate-300 px-4 py-3 rounded-xl max-w-[60%] outline-blue-500/75"
               required
             />
           </div>
 
-          <div class="space-y-2">
-            <label for="password" class="text-sm font-semibold text-slate-700">
-              Contrasena
+          <div class="space-y-2 inline-flex">
+            <label for="password" class="text-sm font-semibold text-slate-700 self-center mr-10">
+              Contraseña
             </label>
             <input
               id="password"
               name="password"
               type="password"
-              placeholder="clave"
-              class="w-full border border-slate-300 px-4 py-3"
+              placeholder="Clave"
+              class="w-full border border-slate-300 px-4 py-3 rounded-xl max-w-[60%] outline-blue-500/75"
               required
             />
           </div>
 
           <button
             type="submit"
-            class="w-full bg-brand-accent px-4 py-3 text-sm font-semibold text-white"
+            class="w-full
+            bg-brand-accent
+            px-4 py-3 
+            text-sm font-semibold text-white 
+            rounded-xl 
+            hover:scale-105 transition duration-300
+            hover:bg-brand-accentDark"
           >
             Ingresar
           </button>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YurtzCamp</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="loaded learning-page">
+    <main class="learning-shell">
+      <section class="learning-card">
+        <div class="learning-title-row">
+          <p class="section-subtitle text-center">YurtzCamp</p>
+          <button
+            class="learning-help-button"
+            id="goalHelpButton"
+            type="button"
+            title="Que queremos lograr?"
+            aria-label="Que queremos lograr?"
+            aria-expanded="false"
+            aria-controls="goalSummary"
+          >
+            ?
+          </button>
+        </div>
+        <div id="mainContentWrapper">
+          <h1 class="headline-1 text-center">
+            Aprender programacion en equipo
+          </h1>
+          <p class="learning-intro text-center">
+            YurtzCamp es una pagina de practica pensada para ensenar, aprender y
+            compartir lo que fuimos descubriendo sobre Git, GitHub y desarrollo
+            web en tiempo real.
+          </p>
+
+          <section class="activity-board" aria-label="Actividades de estudio" id="activityBoard">
+          <article class="activity-card activity-card--gold">
+            <div class="activity-card__header">
+              <div>
+                <p class="learning-panel-kicker">Actividad 1</p>
+                <h2 class="title-3">Trabajo en PP</h2>
+              </div>
+              <div class="activity-card__controls">
+                <button
+                  class="activity-toggle-btn"
+                  type="button"
+                  data-bitacora-toggle
+                  aria-expanded="false"
+                >
+                  Ver bitacora
+                </button>
+                <label class="activity-check">
+                  <input
+                    type="checkbox"
+                    class="activity-check__input"
+                    data-activity-id="activity-1"
+                  />
+                  <span class="activity-check__box" aria-hidden="true"></span>
+                  <span class="activity-check__label">Completo</span>
+                </label>
+              </div>
+            </div>
+            <p class="body-2" data-activity-main>
+              Repaso de Git, Live Share, errores de terminal, ramas, origenes y
+              despliegue. Esta actividad resume la primera practica compartida.
+            </p>
+            <div class="activity-log hidden" data-activity-log>
+              <h3 class="title-3">Bitacora</h3>
+              <p class="body-2">
+                Aprendimos que Git no es solo para subir archivos, sino para
+                ordenar el trabajo, colaborar mejor y recuperar el control del
+                proyecto. Entendimos para que sirven
+                <code>git add</code>, <code>git commit</code>,
+                <code>git push</code>, <code>git pull</code> y
+                <code>git remote -v</code>, y tambien por que
+                <code>--force</code> puede ser peligroso.
+              </p>
+              <p class="body-2">
+                Tambien aparecio el error <code>403</code>, que nos ayudo a ver
+                que Live Share comparte edicion y terminal, pero no permisos ni
+                credenciales de GitHub. Ademas practicamos estructura de
+                carpetas, servidor local, Emmet y trabajo en equipo con cambios
+                en vivo.
+              </p>
+              <p class="body-2">
+                Entre pruebas, risas y errores fuimos descubriendo como
+                funciona el flujo real de trabajo. Vimos cambios en vivo,
+                entendimos mejor la estructura de carpetas del proyecto y
+                reforzamos el cuidado al ejecutar comandos desde la ruta
+                correcta.
+              </p>
+            </div>
+            <div
+              class="satisfactory-bar"
+              aria-label="Satisfactory Bar actividad 1"
+              data-activity-main
+            >
+              <div class="satisfactory-bar__header">
+                <span class="satisfactory-bar__title">Satisfactory Bar</span>
+                <span class="satisfactory-bar__value">10/10</span>
+              </div>
+              <div class="satisfactory-bar__track" aria-hidden="true">
+                <span class="satisfactory-bar__fill"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+              </div>
+            </div>
+            <p class="activity-status" data-status-for="activity-1" data-activity-main>
+              Pendiente
+            </p>
+          </article>
+
+          <article class="activity-card activity-card--red">
+            <div class="activity-card__header">
+              <div>
+                <p class="learning-panel-kicker">Actividad 2</p>
+                <h2 class="title-3">Javascript en entornos Basicos</h2>
+              </div>
+              <div class="activity-card__controls">
+                <button
+                  class="activity-toggle-btn"
+                  type="button"
+                  data-bitacora-toggle
+                  aria-expanded="false"
+                >
+                  Ver bitacora
+                </button>
+                <label class="activity-check">
+                  <input
+                    type="checkbox"
+                    class="activity-check__input"
+                    data-activity-id="activity-2"
+                  />
+                  <span class="activity-check__box" aria-hidden="true"></span>
+                  <span class="activity-check__label">Completo</span>
+                </label>
+              </div>
+            </div>
+            <p class="body-2" data-activity-main>
+              Vamos a usar un clon sin origen del repositorio
+              <code>AlhuayOscar/RestaurantMenuExample</code> dentro de una
+              carpeta aparte llamada <code>EjemploRestaurante</code> para
+              estudiar como el JavaScript modifica el DOM, que etiquetas toca,
+              como influye sobre el CSS y que comportamiento activa en la
+              interfaz.
+            </p>
+            <div class="activity-log hidden" data-activity-log>
+              <h3 class="title-3">Bitacora</h3>
+              <p class="body-2">
+                Esta actividad queda orientada a analizar el clon
+                <code>EjemploRestaurante</code> para entender que hace el
+                JavaScript, como toca el DOM y que clases o estilos impacta
+                dentro del proyecto.
+              </p>
+              <p class="body-2">
+                La idea es revisar eventos, selectores, cambios de clases,
+                sliders, menus, efectos visuales y cualquier relacion directa
+                entre JavaScript, HTML y CSS.
+              </p>
+            </div>
+            <div
+              class="satisfactory-bar"
+              aria-label="Satisfactory Bar actividad 2"
+              data-activity-main
+            >
+              <div class="satisfactory-bar__header">
+                <span class="satisfactory-bar__title">Satisfactory Bar</span>
+                <span class="satisfactory-bar__value">0/10</span>
+              </div>
+              <div class="satisfactory-bar__track" aria-hidden="true">
+                <span class="satisfactory-bar__fill"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+                <span class="satisfactory-bar__segment"></span>
+              </div>
+            </div>
+            <p class="activity-status" data-status-for="activity-2" data-activity-main>
+              Pendiente
+            </p>
+          </article>
+          </section>
+        </div>
+
+        <section class="learning-goal-summary hidden" id="goalSummary">
+          <div class="learning-panel-header">
+            <div>
+              <p class="learning-panel-kicker">Guia del proyecto</p>
+              <h2 class="title-2">Que queremos lograr</h2>
+            </div>
+            <span class="learning-timestamp">Roadmap activo</span>
+          </div>
+
+          <p class="body-2">
+            YurtzCamp quiere ser una base de estudio para formar a un
+            desarrollador full stack capaz de disenar, construir, desplegar y
+            mantener productos reales. La meta no es aprender tecnologia
+            aislada, sino entender flujo de trabajo, arquitectura,
+            colaboracion, UX, cloud, bases de datos y despliegue continuo.
+          </p>
+
+          <div class="goal-grid">
+            <article class="goal-block">
+              <h3 class="title-3">Que hacemos</h3>
+              <ul class="goal-list body-2">
+                <li>Practicar HTML, CSS, JavaScript y TypeScript.</li>
+                <li>Aprender Git, GitHub, terminal y trabajo colaborativo.</li>
+                <li>Registrar sesiones de pair programming y errores reales.</li>
+                <li>Convertir cada practica en una bitacora util.</li>
+              </ul>
+            </article>
+
+            <article class="goal-block">
+              <h3 class="title-3">Stack objetivo</h3>
+              <ul class="goal-list body-2">
+                <li>MERN con React, Node.js, Express y MongoDB.</li>
+                <li>Next.js para apps full stack y despliegue en Vercel.</li>
+                <li>Prisma, PostgreSQL y Firebase segun el proyecto.</li>
+                <li>Redux Toolkit, Tailwind y Material UI para escalar.</li>
+              </ul>
+            </article>
+
+            <article class="goal-block">
+              <h3 class="title-3">Roadmap tecnico</h3>
+              <ul class="goal-list body-2">
+                <li>Frontend: React, Next.js, CSS Modules, Framer Motion.</li>
+                <li>Backend: APIs, JWT, nodemailer, Stripe y PayPal.</li>
+                <li>Datos: Prisma, Sequelize, MongoDB, SQL y DynamoDB.</li>
+                <li>Cloud: Docker, AWS S3, Lambda y Google Console.</li>
+              </ul>
+            </article>
+
+            <article class="goal-block">
+              <h3 class="title-3">Vision</h3>
+              <ul class="goal-list body-2">
+                <li>Ensenar a programar con ejemplos y contexto real.</li>
+                <li>Pasar de practica guiada a proyectos completos.</li>
+                <li>Desarrollar criterio tecnico y autonomia.</li>
+                <li>Construir una base fuerte para full stack moderno.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script>
+      const goalHelpButton = document.getElementById("goalHelpButton");
+      const goalSummary = document.getElementById("goalSummary");
+      const mainContentWrapper = document.getElementById("mainContentWrapper");
+      const activityChecks = document.querySelectorAll(".activity-check__input");
+      const activityBitacoraToggles = document.querySelectorAll("[data-bitacora-toggle]");
+      const activityTableBody = document.getElementById("activityTableBody");
+      const satisfactoryBars = document.querySelectorAll(".satisfactory-bar");
+      const activityStorageKey = "yurtzcamp-completed";
+
+      const syncSatisfactoryBars = () => {
+        satisfactoryBars.forEach((bar) => {
+          const valueElement = bar.querySelector(".satisfactory-bar__value");
+          if (!valueElement) return;
+
+          const rawValue = valueElement.textContent.trim();
+          const match = rawValue.match(/^(\d+(?:\.\d+)?)\s*\/\s*10$/);
+          const score = match ? Number(match[1]) : 0;
+
+          bar.style.setProperty("--score", String(score));
+        });
+      };
+
+      const updateActivityUI = (activityId, completed) => {
+        const status = document.querySelector(`[data-status-for="${activityId}"]`);
+        if (!status) return;
+
+        status.textContent = completed ? "Completo" : "Pendiente";
+        status.classList.toggle("is-complete", completed);
+      };
+
+      const renderActivityTable = (activitiesMap) => {
+        if (!activityTableBody) return;
+
+        const rows = Array.from(activityChecks).map((check) => {
+          const activityId = check.dataset.activityId;
+          const title =
+            check.closest(".activity-card").querySelector(".title-3").textContent;
+          const completed = Boolean(activitiesMap[activityId]);
+
+          return `
+            <tr>
+              <td>${title}</td>
+              <td class="${completed ? "is-complete" : ""}">
+                ${completed ? "Completo" : "Pendiente"}
+              </td>
+            </tr>
+          `;
+        });
+
+        activityTableBody.innerHTML = rows.join("");
+      };
+
+      const initializeActivities = () => {
+        let savedActivities = {};
+
+        try {
+          savedActivities = JSON.parse(localStorage.getItem(activityStorageKey)) || {};
+        } catch {
+          savedActivities = {};
+        }
+
+        const activitiesMap = {};
+
+        activityChecks.forEach((check) => {
+          const activityId = check.dataset.activityId;
+          const completed = Boolean(savedActivities[activityId]);
+
+          activitiesMap[activityId] = completed;
+
+          check.checked = completed;
+          updateActivityUI(activityId, completed);
+
+          check.addEventListener("change", () => {
+            updateActivityUI(activityId, check.checked);
+            activitiesMap[activityId] = check.checked;
+            localStorage.setItem(activityStorageKey, JSON.stringify(activitiesMap));
+            renderActivityTable(activitiesMap);
+          });
+        });
+
+        renderActivityTable(activitiesMap);
+      };
+
+      initializeActivities();
+
+      syncSatisfactoryBars();
+
+      activityBitacoraToggles.forEach((button) => {
+        const card = button.closest(".activity-card");
+        const mainBlocks = card.querySelectorAll("[data-activity-main]");
+        const logBlock = card.querySelector("[data-activity-log]");
+
+        button.addEventListener("click", () => {
+          const showingLog = logBlock.classList.contains("hidden");
+
+          logBlock.classList.toggle("hidden", !showingLog);
+          mainBlocks.forEach((block) => {
+            block.classList.toggle("hidden", showingLog);
+          });
+
+          button.setAttribute("aria-expanded", String(showingLog));
+          button.textContent = showingLog ? "Volver a actividad" : "Ver bitacora";
+        });
+      });
+
+      goalHelpButton.addEventListener("click", () => {
+        const isHidden = goalSummary.classList.contains("hidden");
+
+        goalSummary.classList.toggle("hidden", !isHidden);
+        goalHelpButton.setAttribute("aria-expanded", String(isHidden));
+        mainContentWrapper.classList.toggle("hidden", isHidden);
+      });
+    </script>
+  </body>
+</html>

@@ -1,13 +1,13 @@
-/*-----------------------------------*\
+/*AAAAAAAAAA OOOOMA/*-----------------------------------*\
   #index.css
 \*-----------------------------------*/
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-
+/*QUE ONDA PAPAAAAAAAAAAAAAAAAAAAAAAA*/
 :root {
-  /**
+  /** ACA ANDAA
    * COLORS
    */
 
@@ -179,6 +179,7 @@ address {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -189,7 +190,8 @@ body {
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
   overflow: hidden;
-  height: 300vh;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body.loaded {
@@ -2632,5 +2634,506 @@ textarea.input-field {
   .features .shape-2 {
     bottom: 80px;
     left: 0;
+  }
+}
+
+.learning-page {
+  min-height: 100vh;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top, rgba(212, 176, 107, 0.18), transparent 32%),
+    linear-gradient(180deg, var(--smoky-black-1), var(--eerie-black-1));
+}
+
+.learning-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+
+.learning-card {
+  width: min(820px, 100%);
+  max-width: 100%;
+  background-color: rgba(17, 17, 19, 0.92);
+  border: 1px solid var(--white-alpha-10);
+  border-radius: var(--radius-24);
+  box-shadow: var(--shadow-1);
+  padding: 32px 24px;
+  overflow: hidden;
+}
+
+.learning-intro {
+  max-width: 58ch;
+  margin: 0 auto 28px;
+  color: var(--quick-silver);
+  font-size: 1.8rem;
+}
+
+.activity-board {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.activity-table-panel {
+  background-color: rgba(10, 10, 12, 0.7);
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.activity-table-wrap {
+  overflow-x: auto;
+}
+
+.activity-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activity-table th,
+.activity-table td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--white-alpha-10);
+}
+
+.activity-table th {
+  color: var(--gold-crayola);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.activity-table td {
+  color: var(--quick-silver);
+  font-size: 1.5rem;
+}
+
+.activity-table td.is-complete {
+  color: #9ee6a5;
+  font-weight: var(--weight-bold);
+}
+
+.activity-card {
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid var(--white-alpha-10);
+  box-shadow: var(--shadow-1);
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.activity-card--gold {
+  background: linear-gradient(
+    180deg,
+    rgba(212, 176, 107, 0.14),
+    rgba(17, 17, 19, 0.94)
+  );
+}
+
+.activity-card--red {
+  background: linear-gradient(
+    180deg,
+    rgba(173, 40, 40, 0.3),
+    rgba(47, 12, 12, 0.96)
+  );
+  border-color: rgba(255, 129, 129, 0.26);
+}
+
+.activity-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.activity-card__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.activity-toggle-btn {
+  border: 1px solid var(--gold-crayola);
+  border-radius: 999px;
+  padding: 9px 14px;
+  color: var(--gold-crayola);
+  background-color: rgba(212, 176, 107, 0.08);
+  font-size: 1.2rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--transition-1);
+}
+
+.activity-toggle-btn:hover,
+.activity-toggle-btn:focus-visible {
+  background-color: var(--gold-crayola);
+  color: var(--smoky-black-1);
+  transform: translateY(-1px);
+}
+
+.activity-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.activity-check__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.activity-check__box {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1px solid var(--gold-crayola);
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-1);
+}
+
+.activity-check__box::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: var(--smoky-black-1);
+  transform: scale(0);
+  transition: var(--transition-1);
+}
+
+.activity-check__input:checked + .activity-check__box {
+  background-color: var(--gold-crayola);
+}
+
+.activity-check__input:checked + .activity-check__box::after {
+  transform: scale(1);
+}
+
+.activity-check__label {
+  color: var(--white);
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.activity-status {
+  margin-top: 14px;
+  color: var(--quick-silver);
+  font-size: 1.3rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.activity-status.is-complete {
+  color: #9ee6a5;
+}
+
+.activity-log {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--white-alpha-10);
+}
+
+.activity-log .title-3 {
+  margin-bottom: 12px;
+}
+
+.activity-log .body-2 + .body-2 {
+  margin-top: 12px;
+}
+
+.satisfactory-bar {
+  --score-clamped: min(max(var(--score), 0), 10);
+  --score-percent: calc(var(--score-clamped) * 10%);
+  margin-top: 18px;
+}
+
+.satisfactory-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.satisfactory-bar__title,
+.satisfactory-bar__value {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.satisfactory-bar__value {
+  color: var(--gold-crayola);
+}
+
+.satisfactory-bar__track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--white-alpha-10);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.satisfactory-bar__fill {
+  position: absolute;
+  inset: 6px auto 6px 6px;
+  width: var(--score-percent);
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(212, 176, 107, 0.72),
+      rgba(255, 215, 138, 0.95),
+      rgba(212, 176, 107, 0.72)
+    );
+  background-size: 200% 100%;
+  box-shadow: 0 0 18px rgba(212, 176, 107, 0.35);
+  animation: satisfactoryFlow 3.2s linear infinite;
+}
+
+.activity-card--red .satisfactory-bar__fill {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 98, 98, 0.68),
+      rgba(255, 144, 115, 0.95),
+      rgba(255, 98, 98, 0.68)
+    );
+  box-shadow: 0 0 18px rgba(255, 98, 98, 0.28);
+}
+
+.satisfactory-bar__segment {
+  position: relative;
+  z-index: 1;
+  min-height: 14px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+@keyframes satisfactoryFlow {
+  0% {
+    background-position: 0% 50%;
+    filter: saturate(0.95);
+  }
+
+  50% {
+    background-position: 100% 50%;
+    filter: saturate(1.15);
+  }
+
+  100% {
+    background-position: 0% 50%;
+    filter: saturate(0.95);
+  }
+}
+
+.learning-title-row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learning-title-row .section-subtitle {
+  margin-block-end: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.learning-help-button {
+  position: absolute;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-crayola);
+  color: var(--gold-crayola);
+  background-color: rgba(212, 176, 107, 0.08);
+  font-size: 1.36rem;
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: var(--transition-1);
+}
+
+.learning-help-button:hover,
+.learning-help-button:focus-visible {
+  background-color: var(--gold-crayola);
+  color: var(--smoky-black-1);
+  transform: translateY(-1px);
+}
+
+.learning-goal-summary {
+  background-color: rgba(10, 10, 12, 0.7);
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+}
+
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.goal-block {
+  background-color: var(--eerie-black-2);
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.goal-block .title-3 {
+  margin-bottom: 12px;
+}
+
+.goal-list {
+  padding-left: 18px;
+}
+
+.goal-list li {
+  list-style: disc;
+}
+
+.goal-list li + li {
+  margin-top: 8px;
+}
+
+.learning-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.learning-panel {
+  background-color: var(--eerie-black-2);
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.learning-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.learning-panel-kicker {
+  color: var(--gold-crayola);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 1.2rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 8px;
+}
+
+.learning-timestamp {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  border: 1px solid var(--white-alpha-10);
+  border-radius: 999px;
+  padding: 8px 12px;
+  color: var(--quick-silver);
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.learning-panel .title-2 {
+  margin-bottom: 16px;
+}
+
+.learning-panel .body-2 {
+  color: var(--quick-silver);
+}
+
+.learning-panel .body-2 + .body-2 {
+  margin-top: 16px;
+}
+
+.learning-tech {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--white-alpha-10);
+}
+
+.learning-tech .title-3 {
+  margin-bottom: 12px;
+}
+
+.learning-panel code {
+  display: inline;
+  color: var(--gold-crayola);
+  font-family: Consolas, Monaco, monospace;
+}
+
+@media (max-width: 640px) {
+  .activity-card__header {
+    flex-direction: column;
+  }
+
+  .activity-card__controls {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .activity-toggle-btn {
+    text-align: center;
+  }
+
+  .activity-check {
+    justify-content: flex-start;
+  }
+
+  .learning-title-row {
+    padding-right: 30px;
+  }
+
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-panel-header {
+    flex-direction: column;
+  }
+
+  .learning-timestamp {
+    align-self: flex-start;
   }
 }

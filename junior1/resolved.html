@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Junior 1 - Resolver</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                dark: "#0f172a",
-                panel: "#dbeafe",
-                soft: "#f8fafc",
-                accent: "#2563eb",
-                accentDark: "#1d4ed8"
-              }
-            },
-            boxShadow: {
-              login: "0 24px 60px rgba(15, 23, 42, 0.18)"
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junior 1 - Resuelto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: "#0f172a",
+              panel: "#dbeafe",
+              soft: "#f8fafc",
+              accent: "#2563eb",
+              accentDark: "#1d4ed8"
             }
+          },
+          boxShadow: {
+            login: "0 24px 60px rgba(15, 23, 42, 0.18)"
           }
         }
-      };
-    </script>
-  </head>
-  <body class="min-h-screen bg-white px-4 py-8 text-slate-900">
-    <main class="mx-auto flex max-w-5xl">
-      <section class="w-full max-w-2xl border border-slate-200 bg-white p-8">
-        <div class="mb-6">
-          <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-accent">
-            Archivo de trabajo
-          </p>
-          <h1 class="mt-3 text-3xl font-bold text-brand-dark">
-            Completa este login con Tailwind
-          </h1>
-          <p class="mt-3 text-base leading-7 text-slate-600">
-            Este archivo esta proposito en una version basica para practicar.
-            La idea es que el alumno agregue rounded, grillas alineadas,
-            responsividad, hover en el boton y el resto de los criterios del
-            README.
-          </p>
-        </div>
+      }
+    };
+  </script>
+</head>
 
-        <form id="basic-login-form" class="space-y-5">
-          <div>
-            <h2 class="text-2xl font-bold text-slate-900">Iniciar sesion</h2>
-            <p class="mt-2 text-sm text-slate-600">
-              Agrega clases de Tailwind para mejorar este formulario.
+<body
+  class="min-h-screen bg-gradient-to-br from-brand-soft via-slate-200 to-blue-100 px-4 py-8 font-sans text-brand-dark">
+  <main class="flex min-h-[calc(100vh-4rem)] items-center justify-center">
+    <section
+      class="w-full max-w-3xl overflow-hidden rounded-[2rem] border border-white/70 bg-white/90 p-8 shadow-login backdrop-blur md:p-10">
+      <div class="grid gap-8 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+        <div class="space-y-4 break-words">
+          <p class="font-mono text-sm font-semibold uppercase tracking-[0.35em] text-brand-accent">
+            Banana Co.
+          </p>
+          <h1 class="font-serif text-4xl font-black leading-tight text-brand-dark md:text-5xl">
+            Bienvenido de nuevo
+          </h1>
+          <p class="text-base leading-7 text-slate-600">
+            Estas entrando a la pagina de la empresa como usuario cliente.
+          </p>
+          <div class="rounded-3xl bg-brand-dark p-5 text-sm leading-6 text-slate-200">
+            <p class="font-semibold text-white">Objetivo cumplido</p>
+            <p class="mt-2">
+              Logo arriba, formulario centrado, labels alineados a la
+              izquierda, campos a la derecha y boton de acceso con colores
+              definidos.
             </p>
           </div>
+        </div>
 
-          <img
-            src="./logo.svg"
-            alt="Logo de YurtzCamp"
-            class="h-20 w-20"
-          />
+        <div class="rounded-[1.75rem] bg-brand-panel p-6 md:p-2">
+          <form id="login-form" class="space-y-5 rounded-[1.5rem] bg-white p-6 shadow-sm">
+            <img src="./logo.svg" alt="Logo de YurtzCamp"
+              class="mx-auto h-20 w-20 rounded-2xl border border-blue-100 bg-white p-3 shadow-sm" />
 
-          <div class="space-y-2">
-            <label for="username" class="text-sm font-semibold text-slate-700">
-              Usuario
-            </label>
-            <input
-              id="username"
-              name="username"
-              type="text"
-              placeholder="usuario"
-              class="w-full border border-slate-300 px-4 py-3"
-              required
-            />
-          </div>
+            <div class="space-y-1 text-center">
+              <h2 class="font-serif text-2xl font-bold text-brand-dark">Iniciar sesion</h2>
+              <p class="text-sm text-slate-500">
+                Ingresa tus datos para continuar.
+              </p>
+            </div>
 
-          <div class="space-y-2">
-            <label for="password" class="text-sm font-semibold text-slate-700">
-              Contrasena
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="clave"
-              class="w-full border border-slate-300 px-4 py-3"
-              required
-            />
-          </div>
+            <div class="grid gap-2 sm:grid-cols-[120px,1fr] sm:items-center">
+              <label for="username" class="text-sm font-semibold text-slate-700 sm:text-right">
+                Usuario
+              </label>
+              <input id="username" name="username" type="text" placeholder="carlos.dev"
+                class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-brand-dark outline-none transition focus:border-brand-accent focus:ring-4 focus:ring-blue-100"
+                required />
+            </div>
 
-          <button
-            type="submit"
-            class="w-full bg-brand-accent px-4 py-3 text-sm font-semibold text-white"
-          >
-            Ingresar
-          </button>
+            <div class="grid gap-2 sm:grid-cols-[120px,1fr] sm:items-center">
+              <label for="password" class="text-sm font-semibold text-slate-700 sm:text-right">
+                Contrasena
+              </label>
+              <input id="password" name="password" type="password" placeholder="********"
+                class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-brand-dark outline-none transition focus:border-brand-accent focus:ring-4 focus:ring-blue-100"
+                required />
+            </div>
 
-          <p
-            id="form-message"
-            class="hidden border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700"
-            role="note"
-          ></p>
-        </form>
-      </section>
-    </main>
+            <button type="submit"
+              class="w-full rounded-2xl bg-brand-accent px-4 py-3 text-sm font-bold text-white transition duration-300 hover:-translate-y-1 hover:scale-[1.05] hover:bg-brand-accentDark focus:outline-none focus:ring-4 focus:ring-blue-200">
+              Ingresar
+            </button>
 
-    <script>
-      const form = document.getElementById("basic-login-form");
-      const message = document.getElementById("form-message");
+            <p id="login-message"
+              class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 font-mono text-sm font-medium text-emerald-700"
+              role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
+  <script>
+    const form = document.getElementById("login-form");
+    const message = document.getElementById("login-message");
 
-        const formData = new FormData(form);
-        const username = String(formData.get("username") || "").trim();
-        const password = String(formData.get("password") || "").trim();
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-        if (!username || !password) {
-          message.textContent = "Completa usuario y contrasena para continuar.";
-          message.classList.remove("hidden");
-          return;
-        }
+      const formData = new FormData(form);
+      const username = String(formData.get("username") || "").trim();
+      const password = String(formData.get("password") || "").trim();
 
-        message.textContent = `Hola ${username}, formulario enviado.`;
+      if (!username || !password) {
+        message.textContent = "Completa usuario y contrasena para continuar.";
         message.classList.remove("hidden");
-        form.reset();
-      });
-    </script>
-  </body>
+        return;
+      }
+
+      message.textContent = `Bienvenido ${username}, tu login de practica esta listo.`;
+      message.classList.remove("hidden");
+      form.reset();
+    });
+  </script>
+</body>
+
 </html>

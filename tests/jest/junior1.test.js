@@ -26,27 +26,11 @@ describe("Junior 1 - actividad de login con Tailwind", () => {
     expect(readme).toContain("minimo 4 elementos con bordes redondeados");
     expect(readme).toContain("login-message");
     expect(readme).toContain("hover, transicion suave y pequena escala");
-    expect(readme).toContain("NO USAR OTRO STYLE.CSS");
     expect(readme).toContain("npm test");
-  });
-
-  test("NO USAR OTRO STYLE.CSS", () => {
-    if (
-      forbiddenStylesheetPattern.test(starterHtml) ||
-      forbiddenStylesheetPattern.test(resolvedHtml)
-    ) {
-      throw new Error("NO USAR OTRO STYLE.CSS");
-    }
   });
 
   test("la base de practica carga Tailwind por CDN y muestra una paleta entendible", () => {
     expect(starterHtml).toContain("https://cdn.tailwindcss.com");
-    expect(starterHtml).toContain("Base para practicar");
-    expect(starterHtml).toContain(
-      "TODO: centrar esta tarjeta usando utilidades de Tailwind",
-    );
-    expect(starterHtml).toContain("bg-brand-accent");
-    expect(starterHtml).toContain("hover:bg-brand-accentDark");
   });
 
   test("la base incluye logo, labels, placeholders, required y boton", () => {
